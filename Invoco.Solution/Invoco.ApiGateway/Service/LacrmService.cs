@@ -9,7 +9,7 @@ namespace Invoco.ApiGateway.Service
 	{
 		private readonly HttpClient _httpClient;
 		private readonly IApiRequestLogger _logger;
-		private readonly string _apiKey = "1098869-4024232203134912576435014495300-jVpBj6wftXzbpQxdMWStF5DXsE9UQO4rG99j0fpjSrbJ8QYcsx"; 
+		private readonly string _apiKey = "Key"; 
 
 		public LacrmService(HttpClient httpClient, IApiRequestLogger logger)
 		{
