@@ -1,0 +1,47 @@
+﻿@page "/logs"
+@inject HttpClient Http
+
+<h3>API Logs</h3>
+
+@if (logs == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Endpoint</th>
+                <th>Status Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var log in logs)
+            {
+                <tr>
+                    <td>@log.Time.ToLocalTime().ToString("g")</td>
+                    <td>@log.Endpoint</td>
+                    <td>@log.StatusCode</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<ApiLogEntry>? logs;
+
+    protected override async Task OnInitializedAsync()
+    {
+        logs = await Http.GetFromJsonAsync<List<ApiLogEntry>>("api/logs");
+    }
+
+    public class ApiLogEntry
+    {
+        public DateTime Time { get; set; }
+        public string Endpoint { get; set; }
+        public int StatusCode { get; set; }
+    }
+}
