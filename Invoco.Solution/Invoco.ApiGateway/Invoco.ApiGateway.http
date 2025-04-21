@@ -1,0 +1,6 @@
+@Invoco.ApiGateway_HostAddress = http://localhost:5110
+
+GET {{Invoco.ApiGateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
