@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Invoco.ApiGateway")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc1e70264af4df68ab20700baa0d6e3504671a83")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfd337a8ece300b08b79426172a6f6950a7431ea")]
 [assembly: System.Reflection.AssemblyProductAttribute("Invoco.ApiGateway")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Invoco.ApiGateway")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
