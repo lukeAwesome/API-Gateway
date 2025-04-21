@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\lukem\\OneDrive\\Documents\\API Gateway\\Invoco.Solution\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E76BF337-3D56-4FE3-94CA-AD5A16571D48}|Invoco.ApiGateway\\Invoco.ApiGateway.csproj|c:\\users\\lukem\\onedrive\\documents\\api gateway\\invoco.solution\\invoco.apigateway\\controllers\\telephonycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E76BF337-3D56-4FE3-94CA-AD5A16571D48}|Invoco.ApiGateway\\Invoco.ApiGateway.csproj|solutionrelative:invoco.apigateway\\controllers\\telephonycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TelephonyController.cs",
+              "DocumentMoniker": "C:\\Users\\lukem\\OneDrive\\Documents\\API Gateway\\Invoco.Solution\\Invoco.ApiGateway\\Controllers\\TelephonyController.cs",
+              "RelativeDocumentMoniker": "Invoco.ApiGateway\\Controllers\\TelephonyController.cs",
+              "ToolTip": "C:\\Users\\lukem\\OneDrive\\Documents\\API Gateway\\Invoco.Solution\\Invoco.ApiGateway\\Controllers\\TelephonyController.cs",
+              "RelativeToolTip": "Invoco.ApiGateway\\Controllers\\TelephonyController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAcAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T10:28:04.013Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
