@@ -45,7 +45,10 @@ namespace Invoco.ApiGateway.Service
 				StatusCode = (int)response.StatusCode
 			});
 
-			return response.IsSuccessStatusCode;
+            // Optional for debugging:
+            Console.WriteLine($"LACRM Response: {content}");
+
+            return response.IsSuccessStatusCode;
 		}
 	}
 }
