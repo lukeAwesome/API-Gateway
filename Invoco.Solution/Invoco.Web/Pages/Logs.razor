@@ -3,9 +3,17 @@
 
 <h3>API Logs</h3>
 
-@if (logs == null)
+@if (!string.IsNullOrWhiteSpace(errorMessage))
 {
-    <p><em>Loading...</em></p>
+    <div class="alert alert-danger">@errorMessage</div>
+}
+else if (logs == null)
+{
+    <p><em>Loading logs...</em></p>
+}
+else if (!logs.Any())
+{
+    <p><em>No logs found.</em></p>
 }
 else
 {
@@ -32,10 +40,24 @@ else
 
 @code {
     private List<ApiLogEntry>? logs;
+    private string? errorMessage;
 
     protected override async Task OnInitializedAsync()
     {
-        logs = await Http.GetFromJsonAsync<List<ApiLogEntry>>("api/logs");
+        try
+        {
+            logs = await Http.GetFromJsonAsync<List<ApiLogEntry>>("api/logs");
+        }
+        catch (HttpRequestException httpEx)
+        {
+            errorMessage = $"HTTP error while fetching logs: {httpEx.Message}";
+            Console.WriteLine(httpEx);
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Unexpected error: {ex.Message}";
+            Console.WriteLine(ex);
+        }
     }
 
     public class ApiLogEntry
