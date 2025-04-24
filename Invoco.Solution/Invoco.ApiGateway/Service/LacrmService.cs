@@ -2,53 +2,80 @@
 using Invoco.ApiGateway.Model;
 using System.Text.Json;
 using System.Text;
+using System.Net.Http.Headers;
 
 namespace Invoco.ApiGateway.Service
 {
 	public class LacrmService
 	{
-		private readonly HttpClient _httpClient;
-		private readonly IApiRequestLogger _logger;
-		private readonly string _apiKey = "Key"; 
+        private readonly HttpClient _httpClient;
+        private readonly IApiRequestLogger _logger;
+        private readonly string _apiKey = "YOUR_API_KEY"; // Replace with your actual API key
 
-		public LacrmService(HttpClient httpClient, IApiRequestLogger logger)
-		{
-			_httpClient = httpClient;
-			_logger = logger;
-		}
+        public LacrmService(HttpClient httpClient, IApiRequestLogger logger)
+        {
+            _httpClient = httpClient;
+            _logger = logger;
 
-		public async Task<bool> CreateContactAsync(CallEvent callEvent)
-		{
-			var url = "https://api.lessannoyingcrm.com/v2/";
-			var request = new
-			{
-				userCode = _apiKey,
-				action = "InsertContact",
-				parameters = new
-				{
-					fullName = callEvent.CallersName,
-					phone = new[]
-					{
-						new { type = "Work", value = callEvent.CallersTelephoneNumber }
-					}
-				}
-			};
+            _httpClient.BaseAddress = new Uri("https://api.lessannoyingcrm.com/v2/");
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(_apiKey);
+        }
 
-			var json = JsonSerializer.Serialize(request);
-			var content = new StringContent(json, Encoding.UTF8, "application/json");
+        public async Task<bool> CreateContactAsync(string name, string phoneNumber)
+        {
+            // Step 1: Get UserId
+            var getUserPayload = new
+            {
+                Function = "GetUser",
+                Parameters = new { }
+            };
 
-			var response = await _httpClient.PostAsync(url, content);
-			_logger.Log(new ApiLogEntry
-			{
-				Time = DateTime.UtcNow,
-				Endpoint = "LACRM - InsertContact",
-				StatusCode = (int)response.StatusCode
-			});
+            var getUserContent = new StringContent(JsonSerializer.Serialize(getUserPayload), Encoding.UTF8, "application/json");
+            var getUserResponse = await _httpClient.PostAsync("", getUserContent);
 
-            // Optional for debugging:
-            Console.WriteLine($"LACRM Response: {content}");
+            if (!getUserResponse.IsSuccessStatusCode)
+            {
+                _logger.Log(new ApiLogEntry
+                {
+                    Time = DateTime.UtcNow,
+                    Endpoint = "LACRM - GetUser",
+                    StatusCode = (int)getUserResponse.StatusCode
+                });
 
-            return response.IsSuccessStatusCode;
-		}
-	}
+                return false;
+            }
+
+            var getUserResponseContent = await getUserResponse.Content.ReadAsStringAsync();
+            var userResult = JsonSerializer.Deserialize<GetUserResponse>(getUserResponseContent);
+            int userId = int.Parse(userResult.UserId);
+
+            // Step 2: Create Contact
+            var createContactPayload = new
+            {
+                Function = "CreateContact",
+                Parameters = new
+                {
+                    IsCompany = false,
+                    AssignedTo = userId,
+                    Name = name,
+                    Phone = new[]
+                    {
+                        new { Phone = phoneNumber, Type = "Work" }
+                    }
+                }
+            };
+
+            var createContent = new StringContent(JsonSerializer.Serialize(createContactPayload), Encoding.UTF8, "application/json");
+            var createResponse = await _httpClient.PostAsync("", createContent);
+
+            _logger.Log(new ApiLogEntry
+            {
+                Time = DateTime.UtcNow,
+                Endpoint = "LACRM - CreateContact",
+                StatusCode = (int)createResponse.StatusCode
+            });
+
+            return createResponse.IsSuccessStatusCode;
+        }
+    }
 }

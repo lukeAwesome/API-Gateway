@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\lukem\\OneDrive\\Documents\\API Gateway\\Invoco.Solution\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E76BF337-3D56-4FE3-94CA-AD5A16571D48}|Invoco.ApiGateway\\Invoco.ApiGateway.csproj|c:\\users\\lukem\\onedrive\\documents\\api gateway\\invoco.solution\\invoco.apigateway\\controllers\\telephonycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E76BF337-3D56-4FE3-94CA-AD5A16571D48}|Invoco.ApiGateway\\Invoco.ApiGateway.csproj|solutionrelative:invoco.apigateway\\controllers\\telephonycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E76BF337-3D56-4FE3-94CA-AD5A16571D48}|Invoco.ApiGateway\\Invoco.ApiGateway.csproj|c:\\users\\lukem\\onedrive\\documents\\api gateway\\invoco.solution\\invoco.apigateway\\service\\lacrmservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E76BF337-3D56-4FE3-94CA-AD5A16571D48}|Invoco.ApiGateway\\Invoco.ApiGateway.csproj|solutionrelative:invoco.apigateway\\service\\lacrmservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E76BF337-3D56-4FE3-94CA-AD5A16571D48}|Invoco.ApiGateway\\Invoco.ApiGateway.csproj|c:\\users\\lukem\\onedrive\\documents\\api gateway\\invoco.solution\\invoco.apigateway\\model\\callevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E76BF337-3D56-4FE3-94CA-AD5A16571D48}|Invoco.ApiGateway\\Invoco.ApiGateway.csproj|solutionrelative:invoco.apigateway\\model\\callevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{460809E1-FF29-401E-8443-D2B6C1E66826}|Invoco.Web\\Invoco.Web.csproj|c:\\users\\lukem\\onedrive\\documents\\api gateway\\invoco.solution\\invoco.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{460809E1-FF29-401E-8443-D2B6C1E66826}|Invoco.Web\\Invoco.Web.csproj|solutionrelative:invoco.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -34,11 +46,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CallEvent.cs",
+              "DocumentMoniker": "C:\\Users\\lukem\\OneDrive\\Documents\\API Gateway\\Invoco.Solution\\Invoco.ApiGateway\\Model\\CallEvent.cs",
+              "RelativeDocumentMoniker": "Invoco.ApiGateway\\Model\\CallEvent.cs",
+              "ToolTip": "C:\\Users\\lukem\\OneDrive\\Documents\\API Gateway\\Invoco.Solution\\Invoco.ApiGateway\\Model\\CallEvent.cs",
+              "RelativeToolTip": "Invoco.ApiGateway\\Model\\CallEvent.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAcwBAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:41:59.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TelephonyController.cs",
+              "DocumentMoniker": "C:\\Users\\lukem\\OneDrive\\Documents\\API Gateway\\Invoco.Solution\\Invoco.ApiGateway\\Controllers\\TelephonyController.cs",
+              "RelativeDocumentMoniker": "Invoco.ApiGateway\\Controllers\\TelephonyController.cs",
+              "ToolTip": "C:\\Users\\lukem\\OneDrive\\Documents\\API Gateway\\Invoco.Solution\\Invoco.ApiGateway\\Controllers\\TelephonyController.cs",
+              "RelativeToolTip": "Invoco.ApiGateway\\Controllers\\TelephonyController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:37:43.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "LacrmService.cs",
+              "DocumentMoniker": "C:\\Users\\lukem\\OneDrive\\Documents\\API Gateway\\Invoco.Solution\\Invoco.ApiGateway\\Service\\LacrmService.cs",
+              "RelativeDocumentMoniker": "Invoco.ApiGateway\\Service\\LacrmService.cs",
+              "ToolTip": "C:\\Users\\lukem\\OneDrive\\Documents\\API Gateway\\Invoco.Solution\\Invoco.ApiGateway\\Service\\LacrmService.cs",
+              "RelativeToolTip": "Invoco.ApiGateway\\Service\\LacrmService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:18:52.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\lukem\\OneDrive\\Documents\\API Gateway\\Invoco.Solution\\Invoco.Web\\Shared\\NavMenu.razor",
               "RelativeDocumentMoniker": "Invoco.Web\\Shared\\NavMenu.razor",
@@ -46,12 +97,11 @@
               "RelativeToolTip": "Invoco.Web\\Shared\\NavMenu.razor",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAABoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-21T11:20:47.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T11:20:47.516Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Logs.razor",
               "DocumentMoniker": "C:\\Users\\lukem\\OneDrive\\Documents\\API Gateway\\Invoco.Solution\\Invoco.Web\\Pages\\Logs.razor",
               "RelativeDocumentMoniker": "Invoco.Web\\Pages\\Logs.razor",
@@ -63,7 +113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\lukem\\OneDrive\\Documents\\API Gateway\\Invoco.Solution\\Invoco.ApiGateway\\Program.cs",
               "RelativeDocumentMoniker": "Invoco.ApiGateway\\Program.cs",
@@ -75,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\lukem\\OneDrive\\Documents\\API Gateway\\Invoco.Solution\\Invoco.Web\\Program.cs",
               "RelativeDocumentMoniker": "Invoco.Web\\Program.cs",
@@ -88,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "ApiLogEntry.cs",
               "DocumentMoniker": "C:\\Users\\lukem\\OneDrive\\Documents\\API Gateway\\Invoco.Solution\\Invoco.Web\\Model\\ApiLogEntry.cs",
               "RelativeDocumentMoniker": "Invoco.Web\\Model\\ApiLogEntry.cs",
@@ -100,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "LogsController.cs",
               "DocumentMoniker": "C:\\Users\\lukem\\OneDrive\\Documents\\API Gateway\\Invoco.Solution\\Invoco.ApiGateway\\Controllers\\LogsController.cs",
               "RelativeDocumentMoniker": "Invoco.ApiGateway\\Controllers\\LogsController.cs",
